@@ -4,7 +4,7 @@ All coursework for the Typescript: The Complete Developer's Guide [2020] by Step
 
 [The Course at Udemy](https://www.udemy.com/course/typescript-the-complete-developers-guide/)
 
-![Certificate](Certificate.jpg)
+![Certificate](tscertificate.jpeg)
 
 ## Curriculum
 
