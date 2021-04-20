@@ -1,11 +1,10 @@
 import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
 import express, { Request, Response } from 'express';
+import { router } from './routes/loginRoutes';
 import './controllers/LoginController';
-import './controllers/RootController';
-import { AppRouter } from './AppRouter';
+import { router as controllerRouter } from './controllers/decorators/controller';
 
-//pass an express() instance to app variable
 const app = express();
 
 //wire upp the bodyParser middleware to be able to send a post request
@@ -16,8 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //to be able to add session to req
 app.use(cookieSession({ keys: ['lasdfg'] }));
 
+//tells the app to use the router from loginRoutes
+app.use(router);
+
 //tells the app to use router from controller decorator
-app.use(AppRouter.getInstance());
+app.use(controllerRouter);
 
 //run the listen function
 //so that the app can listen on port 3000

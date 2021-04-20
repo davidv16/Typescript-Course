@@ -5,7 +5,6 @@ import './controllers/LoginController';
 import './controllers/RootController';
 import { AppRouter } from './AppRouter';
 
-//pass an express() instance to app variable
 const app = express();
 
 //wire upp the bodyParser middleware to be able to send a post request
